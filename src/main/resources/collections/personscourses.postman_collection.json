@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "ca0f59dd-a8ea-407b-8c60-f84c704ea087",
+		"name": "personscourses",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"personId\": 3,\r\n    \"courseId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}",
+					"host": [
+						"{{base-url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by course id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/1/persons",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"1",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by person id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/1/courses",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"1",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base-url",
+			"value": "http://localhost:8080/pc",
+			"type": "default"
+		}
+	]
+}

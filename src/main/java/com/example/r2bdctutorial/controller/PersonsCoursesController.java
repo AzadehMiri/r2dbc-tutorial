@@ -28,13 +28,13 @@ public class PersonsCoursesController {
                 personsCourses.getCourseId()));
     }
 
-    @GetMapping("/{courseId}")
+    @GetMapping("/{courseId}/persons")
     @ResponseStatus(HttpStatus.OK)
     public Flux<PersonsCourses> getByCourseId(@PathVariable("courseId") Long courseId) {
         return personsCoursesService.findAllPersons(courseId);
     }
 
-    @GetMapping("/{personId}")
+    @GetMapping("/{personId}/courses")
     @ResponseStatus(HttpStatus.OK)
     public Flux<PersonsCourses> getByPersonId(@PathVariable("personId") Long personId) {
         return personsCoursesService.findAllCourses(personId);
